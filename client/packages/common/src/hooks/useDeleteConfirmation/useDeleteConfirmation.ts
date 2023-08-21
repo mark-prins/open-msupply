@@ -1,8 +1,6 @@
-import {
-  useTranslation,
-  useNotification,
-  useConfirmationModal,
-} from '@openmsupply-client/common';
+import { useTranslation } from '@common/intl';
+import { useNotification } from '../useNotification';
+import { useConfirmationModal } from '@common/components';
 
 interface DeleteConfirmationProps<T> {
   selectedRows: T[];

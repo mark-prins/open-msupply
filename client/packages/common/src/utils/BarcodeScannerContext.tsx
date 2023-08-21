@@ -7,7 +7,7 @@ import { useNotification } from '../hooks/useNotification';
 import { useTranslation } from '@common/intl';
 import { parseBarcode } from 'gs1-barcode-parser-mod';
 import { Formatter } from './formatters';
-import { BarcodeScanner, ScannerType } from '@openmsupply-client/common';
+import { BarcodeScanner, ScannerType } from '@common/hooks';
 
 const SCAN_TIMEOUT_IN_MS = 5000;
 

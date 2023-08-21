@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useMutation } from 'react-query';
 import { uniqWith } from 'lodash';
-import { useNavigate } from '@openmsupply-client/common';
 import { KeepAwake } from '@capacitor-community/keep-awake';
 import { Capacitor } from '@capacitor/core';
 import { App } from '@capacitor/app';
+import { useNavigate } from 'react-router-dom';
 import {
   getNativeAPI,
   getPreference,

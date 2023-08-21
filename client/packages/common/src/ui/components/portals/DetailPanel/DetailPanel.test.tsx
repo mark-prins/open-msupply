@@ -1,14 +1,11 @@
 import { render } from '@testing-library/react';
 import React, { FC } from 'react';
 import { act } from 'react-dom/test-utils';
-import {
-  DetailPanelSection,
-  setScreenSize_ONLY_FOR_TESTING,
-  useDetailPanel,
-} from '@openmsupply-client/common';
+import { DetailPanelSection } from '@common/components';
 import { DetailPanel, DetailPanelPortal } from './DetailPanel';
-import { TestingProvider } from '@common/utils';
+import { TestingProvider, setScreenSize_ONLY_FOR_TESTING } from '@common/utils';
 import { PropsWithChildrenOnly } from '@common/types';
+import { useDetailPanel } from '@common/hooks';
 
 describe('DetailPanel', () => {
   const DetailPanelExample: FC<PropsWithChildrenOnly> = ({ children }) => {

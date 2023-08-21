@@ -1,4 +1,5 @@
-import { useGql, useQuery } from '@openmsupply-client/common';
+import { useQuery } from 'react-query';
+import { useGql } from '../GqlContext';
 import { getSdk } from '../operations.generated';
 
 export const useInitialisationStatus = (

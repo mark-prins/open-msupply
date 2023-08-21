@@ -1,9 +1,6 @@
 import React, { FC, PropsWithChildren, ReactNode } from 'react';
-import {
-  createColumnWithDefaults,
-  TestingRouterContext,
-} from '@openmsupply-client/common';
-import { TestingProvider } from '../../utils/testing';
+import { createColumnWithDefaults } from '../../ui';
+import { TestingProvider, TestingRouterContext } from '../../utils/testing';
 import { useTheme } from '@common/styles';
 import { act, renderHook } from '@testing-library/react';
 import {

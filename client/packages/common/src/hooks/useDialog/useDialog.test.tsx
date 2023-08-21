@@ -1,9 +1,9 @@
 import React from 'react';
 import { act, render, waitFor } from '@testing-library/react';
-import { TestingProvider } from '@openmsupply-client/common';
+import { DialogButton } from '@common/components';
+import { TestingProvider } from '@common/utils';
 
 import { useDialog } from './useDialog';
-import { DialogButton } from '@common/components';
 
 describe('useDialog', () => {
   const DialogExample: React.FC = () => {

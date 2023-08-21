@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { useUrlQuery } from './useUrlQuery';
-import { Column, useLocalStorage } from '@openmsupply-client/common';
+import { Column } from '../../ui';
 import { FilterBy, FilterController } from '../useQueryParams';
+import { useLocalStorage } from '../../localStorage';
 
 // This hook uses the state of the url query parameters (from useUrlQuery hook)
 // to provide query parameters and update methods to tables.

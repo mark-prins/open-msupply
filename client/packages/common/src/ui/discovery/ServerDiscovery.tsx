@@ -1,17 +1,16 @@
 import React from 'react';
-import {
-  Box,
-  Typography,
-  useTranslation,
-  Stack,
-  useNativeClient,
-  ErrorWithDetails,
-  frontEndHostDisplay,
-  SnackbarProvider,
-} from '@openmsupply-client/common';
-import { LoginIcon } from '@openmsupply-client/host/src/components/Login/LoginIcon';
+import { Typography, ErrorWithDetails } from '@common/components';
 import { Theme } from '@common/styles';
 import { DiscoveredServers } from './DiscoveredServers';
+import { MSupplyGuy } from '@common/icons';
+import {
+  frontEndHostDisplay,
+  useIsSmallScreen,
+  useNativeClient,
+} from '@common/hooks';
+import { Box, Stack } from '@mui/material';
+import { useTranslation } from '@common/intl';
+import { SnackbarProvider } from 'notistack';
 
 // TODO should this be disabled if native client doesn't exist ? (since it's navigable from host)
 
@@ -45,12 +44,16 @@ export const ServerDiscovery = () => {
     autoconnect: isAutoconnect(),
   });
   const t = useTranslation('app');
+  const isSmallScreen = useIsSmallScreen();
   const discover = () => {
     stopDiscovery();
     startDiscovery();
   };
 
   const server = previousServer ? frontEndHostDisplay(previousServer) : '';
+  const logoStyle = isSmallScreen
+    ? { width: 155, height: 90 }
+    : { width: 285, height: 180 };
 
   return (
     <SnackbarProvider maxSnack={3}>
@@ -72,7 +75,7 @@ export const ServerDiscovery = () => {
             justifyContent="center"
             padding={2}
           >
-            <LoginIcon />
+            <MSupplyGuy style={logoStyle} />
           </Box>
           <Box display="flex" flexDirection="column" justifyContent="center">
             <Typography

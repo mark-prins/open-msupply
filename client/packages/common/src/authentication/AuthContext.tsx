@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { createContext, useMemo, useState, useEffect, FC } from 'react';
-import { AppRouteCommon } from '@common/types';
 import { useLocalStorage } from '../localStorage';
 import Cookies from 'js-cookie';
 import addMinutes from 'date-fns/addMinutes';
@@ -8,7 +7,11 @@ import { useLogin, useGetUserPermissions, useRefreshToken } from './api/hooks';
 
 import { AuthenticationResponse } from './api';
 import { UserStoreNodeFragment } from './api/operations.generated';
-import { PropsWithChildrenOnly, UserPermission } from '@common/types';
+import {
+  AppRouteCommon,
+  PropsWithChildrenOnly,
+  UserPermission,
+} from '@common/types';
 import { RouteBuilder } from '../utils/navigation';
 import { matchPath } from 'react-router-dom';
 import { useGql } from '../api';

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Box, Tooltip, Typography } from '@openmsupply-client/common';
+import { Box, Tooltip, Typography } from '@mui/material';
 import { useFormatNumber } from '@common/intl';
 
 const MIN_FLEX_BASIS_TO_SHOW_LABEL = 10;

@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { ObjUtils } from '@openmsupply-client/common';
+import { ObjUtils } from '@common/utils';
 import { useTableStore, TableStore } from '../TableContext';
 import { AppSxProp } from '../../../../../styles';
 

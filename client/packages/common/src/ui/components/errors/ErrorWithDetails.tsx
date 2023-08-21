@@ -1,10 +1,7 @@
+import { AlertIcon } from '@common/icons';
+import { Box, Typography } from '@mui/material';
 import React from 'react';
-import {
-  Box,
-  AlertIcon,
-  Typography,
-  InfoTooltipIcon,
-} from '@openmsupply-client/common';
+import { InfoTooltipIcon } from '../popover';
 
 export type ErrorWithDetailsProps = {
   error: string;

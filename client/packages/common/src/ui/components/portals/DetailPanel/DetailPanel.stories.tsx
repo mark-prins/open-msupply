@@ -2,15 +2,10 @@ import React, { ReactNode } from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
 import { Grid, Typography } from '@mui/material';
 import { DetailPanel, DetailPanelPortal } from './DetailPanel';
-import {
-  ClockIcon,
-  CopyIcon,
-  DetailPanelAction,
-  DetailPanelSection,
-  RewindIcon,
-  StoryProvider,
-  useDetailPanel,
-} from '@openmsupply-client/common';
+import { ClockIcon, CopyIcon, RewindIcon } from '@common/icons';
+import { StoryProvider } from '@common/utils';
+import { useDetailPanel } from '@common/hooks';
+import { DetailPanelAction, DetailPanelSection } from '../../panels';
 
 export default {
   title: 'Components/DetailPanel',

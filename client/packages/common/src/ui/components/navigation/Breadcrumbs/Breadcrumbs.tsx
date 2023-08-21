@@ -2,7 +2,8 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Breadcrumbs as MuiBreadcrumbs } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { useRegisterActions, useBreadcrumbs } from '@openmsupply-client/common';
+import { useBreadcrumbs } from '@common/hooks';
+import { useRegisterActions } from 'kbar';
 import { useTranslation } from '@common/intl';
 import { UrlPart } from '@common/hooks';
 

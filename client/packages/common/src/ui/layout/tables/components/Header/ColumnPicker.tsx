@@ -7,14 +7,12 @@ import {
   Typography,
   FormControlLabel,
 } from '@mui/material';
-import {
-  Checkbox,
-  Column,
-  ColumnsIcon,
-  RecordWithId,
-  useLocalStorage,
-} from '@openmsupply-client/common';
+import { Checkbox } from '@common/components';
+import { Column } from '../../columns';
 import { LocaleKey, useTranslation } from '@common/intl';
+import { RecordWithId } from '@common/types';
+import { useLocalStorage } from '../../../../..';
+import { ColumnsIcon } from '@common/icons';
 
 interface ColumnPickerProps<T extends RecordWithId> {
   columns: Column<T>[];

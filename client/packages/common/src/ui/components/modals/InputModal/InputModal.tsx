@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import {
-  BasicSpinner,
-  Box,
-  useDialog,
-  DialogButton,
-} from '@openmsupply-client/common';
+import { BasicSpinner, DialogButton } from '@common/components';
+import { Box } from '@mui/material';
+import { useDialog } from '@common/hooks';
 
 interface InputModalProps {
   isOpen: boolean;

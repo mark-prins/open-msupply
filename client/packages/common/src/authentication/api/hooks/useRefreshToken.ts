@@ -1,11 +1,11 @@
 import {
   COOKIE_LIFETIME_MINUTES,
-  DateUtils,
   getAuthCookie,
   setAuthCookie,
-  useGql,
-} from '@openmsupply-client/common';
+} from '../../../authentication';
+import { useGql } from '../../../api';
 import { useGetRefreshToken } from './useGetRefreshToken';
+import { DateUtils } from '@common/intl';
 
 export const useRefreshToken = () => {
   const { mutateAsync } = useGetRefreshToken();

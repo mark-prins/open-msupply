@@ -11,7 +11,8 @@ import {
   Typography,
   TableCell,
 } from '@mui/material';
-import { BasicSpinner, useRegisterActions } from '@openmsupply-client/common';
+import { BasicSpinner } from '@common/components';
+import { useRegisterActions } from 'kbar';
 
 import { TableProps } from './types';
 import { DataRow } from './components/DataRow/DataRow';

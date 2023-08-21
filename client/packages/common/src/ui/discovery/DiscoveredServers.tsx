@@ -1,29 +1,25 @@
-import React from 'react';
+import { ButtonWithIcon, IconButton, InlineSpinner } from '@common/components';
+import {
+  ConnectionResult,
+  FrontEndHost,
+  frontEndHostDiscoveryGraphql,
+  frontEndHostDisplay,
+  useNativeClient,
+  useNotification,
+} from '@common/hooks';
 import {
   AlertIcon,
-  Box,
-  HomeIcon,
-  InlineSpinner,
-  MenuItem,
-  MenuList,
-  Typography,
-  useTranslation,
-  frontEndHostDisplay,
   CheckboxEmptyIcon,
-  FrontEndHost,
-  useNativeClient,
-  GqlProvider,
-  useInitialisationStatus,
-  InitialisationStatusType,
-  frontEndHostDiscoveryGraphql,
-  IconButton,
-  RefreshIcon,
-  ConnectionResult,
-  useNotification,
-  useMutation,
   ExternalLinkIcon,
-  ButtonWithIcon,
-} from '@openmsupply-client/common';
+  HomeIcon,
+  RefreshIcon,
+} from '@common/icons';
+import { useTranslation } from '@common/intl';
+import { Box, MenuItem, MenuList, Typography } from '@mui/material';
+import React from 'react';
+import { GqlProvider, useInitialisationStatus } from '../../api';
+import { InitialisationStatusType } from '@common/types';
+import { useMutation } from 'react-query';
 
 type ConnectToServer = ReturnType<typeof useNativeClient>['connectToServer'];
 
