@@ -1,5 +1,5 @@
 import { useTranslation } from '@common/intl';
-import { useGql } from '../../../api';
+import { useGql } from '@openmsupply-client/common';
 import { getAuthQueries } from '../api';
 import { getSdk } from '../operations.generated';
 

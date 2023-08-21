@@ -11,12 +11,12 @@ import {
   InvoiceNodeStatus,
   InvoiceNodeType,
   InvoiceSortFieldInput,
-  RecordPatch,
   UpdatePrescriptionInput,
   UpdatePrescriptionLineInput,
   UpdatePrescriptionStatusInput,
-} from '@common/types';
+} from '@openmsupply-client/api';
 import { DraftStockOutLine } from '../../types';
+import { RecordPatch } from '@common/types';
 
 export type ListParams = {
   first: number;

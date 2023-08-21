@@ -1,5 +1,7 @@
-import * as Types from '@openmsupply-client/common';
+import * as Types from '@openmsupply-client/api';
 
+import { GraphQLClient } from 'graphql-request';
+import { GraphQLClientRequestHeaders } from 'graphql-request/build/cjs/types';
 import gql from 'graphql-tag';
 export type PartialStockLineFragment = { __typename: 'StockLineNode', id: string, itemId: string, availableNumberOfPacks: number, totalNumberOfPacks: number, onHold: boolean, sellPricePerPack: number, packSize: number, expiryDate?: string | null, item: { __typename: 'ItemNode', name: string, code: string }, location?: { __typename: 'LocationNode', id: string, name: string, code: string, onHold: boolean } | null };
 
@@ -79,3 +81,12 @@ export const StockOutLineFragmentDoc = gql`
 
 export type SdkFunctionWrapper = <T>(action: (requestHeaders?:Record<string, string>) => Promise<T>, operationName: string, operationType?: string) => Promise<T>;
 
+
+const defaultWrapper: SdkFunctionWrapper = (action, _operationName, _operationType) => action();
+
+export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
+  return {
+
+  };
+}
+export type Sdk = ReturnType<typeof getSdk>;

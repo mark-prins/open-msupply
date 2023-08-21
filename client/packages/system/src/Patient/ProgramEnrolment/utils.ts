@@ -1,5 +1,5 @@
 import { LocaleKey } from '@common/intl';
-import { ProgramEnrolmentNodeStatus } from '@common/types';
+import { ProgramEnrolmentNodeStatus } from '@openmsupply-client/api';
 
 const statusTranslation: Record<ProgramEnrolmentNodeStatus, LocaleKey> = {
   ACTIVE: 'label.program-enrolment-status-active',

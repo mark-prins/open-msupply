@@ -1,4 +1,4 @@
-import * as Types from '@openmsupply-client/common';
+import * as Types from '@openmsupply-client/api';
 
 import { GraphQLClient } from 'graphql-request';
 import { GraphQLClientRequestHeaders } from 'graphql-request/build/cjs/types';

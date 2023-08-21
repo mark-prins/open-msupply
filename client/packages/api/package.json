@@ -1,0 +1,17 @@
+{
+  "name": "@openmsupply-client/api",
+  "version": "0.0.0",
+  "sideEffects": false,
+  "main": "./src/index.ts",
+  "private": true,
+  "devDependencies": {
+  },
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "dependencies": {
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}

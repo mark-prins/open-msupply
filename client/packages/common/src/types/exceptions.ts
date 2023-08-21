@@ -1,4 +1,4 @@
-import { AuthError } from '../authentication';
+import { AuthError } from '../types';
 
 interface Extensions {
   details: string;

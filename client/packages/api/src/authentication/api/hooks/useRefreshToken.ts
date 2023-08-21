@@ -3,7 +3,7 @@ import {
   getAuthCookie,
   setAuthCookie,
 } from '../../../authentication';
-import { useGql } from '../../../api';
+import { useGql } from '@openmsupply-client/common';
 import { useGetRefreshToken } from './useGetRefreshToken';
 import { DateUtils } from '@common/intl';
 

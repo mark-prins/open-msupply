@@ -13,7 +13,7 @@ import {
   RequestOptions,
   Variables,
 } from 'graphql-request';
-import { AuthError } from '../authentication/AuthContext';
+import { AuthError } from '../types';
 import { LocalStorage } from '../localStorage';
 import { DefinitionNode, DocumentNode, OperationDefinitionNode } from 'graphql';
 import { RequestConfig } from 'graphql-request/build/esm/types';
@@ -155,6 +155,7 @@ interface GqlControl {
   setSkipRequest: (skipRequest: SkipRequest) => void;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const GqlContext = createContext<GqlControl>({} as any);
 
 const { Provider } = GqlContext;

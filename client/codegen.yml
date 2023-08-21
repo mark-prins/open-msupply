@@ -1,7 +1,7 @@
 overwrite: true
 schema: [ '../server/schema.graphql' ]
 generates:
-  ./packages/common/src/types/schema.ts:
+  ./packages/api/src/types/schema.ts:
     plugins:
       - typescript
     config:
@@ -16,7 +16,7 @@ generates:
     preset: near-operation-file
     presetConfig:
       extension: .generated.ts
-      baseTypesPath: ~@openmsupply-client/common
+      baseTypesPath: ~@openmsupply-client/api
     plugins:
       - typescript-operations
       - typescript-graphql-request

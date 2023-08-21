@@ -14,7 +14,7 @@ import {
   ProgramEventNode,
   UpdateEncounterInput,
   UpdateProgramEnrolmentInput,
-} from '@common/types';
+} from '@openmsupply-client/api';
 import { EncounterListParams } from './hooks/utils/useEncounterApi';
 import {
   ClinicianFragment,

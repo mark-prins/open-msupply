@@ -5,7 +5,7 @@ import {
   TypedTFunction,
   useTranslation,
 } from '@common/intl';
-import { EncounterNodeStatus } from '@common/types';
+import { EncounterNodeStatus } from '@openmsupply-client/api';
 import { EncounterRowFragment } from '@openmsupply-client/programs';
 import { noOtherVariants } from '@openmsupply-client/common';
 

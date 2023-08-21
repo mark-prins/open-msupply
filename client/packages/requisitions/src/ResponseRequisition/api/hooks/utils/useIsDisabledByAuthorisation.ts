@@ -1,5 +1,5 @@
 import { useResponse } from '../document/useResponse';
-import { RequisitionNodeApprovalStatus } from '@common/types';
+import { RequisitionNodeApprovalStatus } from '@openmsupply-client/api';
 import { useIsRemoteAuthorisation } from './useIsRemoteAuthorisation';
 
 export const useIsDisabledByAuthorisation = (): boolean => {

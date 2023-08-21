@@ -1,12 +1,11 @@
 import {
   AppBarButtonsPortal,
   Grid,
-  ReportContext,
   LoadingButton,
   PrinterIcon,
   useTranslation,
-  UserStoreNodeFragment,
 } from '@openmsupply-client/common';
+import { ReportContext, UserStoreNodeFragment } from '@openmsupply-client/api';
 import React, { FC } from 'react';
 import { AddButton } from './AddButton';
 import { ReportRowFragment, ReportSelector, useReport } from '../../Report';

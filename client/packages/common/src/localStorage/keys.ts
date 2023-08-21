@@ -1,7 +1,6 @@
 import { SupportedLocales } from '@common/intl';
 import { ThemeOptions } from '@mui/material';
-import { UserStoreNodeFragment } from '../authentication/api/operations.generated';
-import { AuthError } from '../authentication/AuthContext';
+import { AuthError } from '../types';
 
 export type GroupByItem = {
   outboundShipment?: boolean;
@@ -9,9 +8,16 @@ export type GroupByItem = {
   stocktake?: boolean;
 };
 export type AuthenticationCredentials = {
-  store?: UserStoreNodeFragment | undefined;
+  store?: UserStoreNodeFragment;
   username: string;
 };
+
+enum StoreModeNodeType {
+  Dispensary = 'DISPENSARY',
+  Store = 'STORE'
+}
+
+export type UserStoreNodeFragment = { __typename: 'UserStoreNode', code: string, id: string, name: string, storeMode: StoreModeNodeType, preferences: any };
 
 export type LocalStorageRecord = {
   '/appdrawer/open': boolean;

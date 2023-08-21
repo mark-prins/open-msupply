@@ -1,6 +1,6 @@
 import { isResponseDisabled } from './../../../../utils';
 import { useResponse } from '../document/useResponse';
-import { RequisitionNodeApprovalStatus } from '@common/types';
+import { RequisitionNodeApprovalStatus } from '@openmsupply-client/api';
 import { useIsRemoteAuthorisation } from './useIsRemoteAuthorisation';
 
 export const useIsResponseDisabled = (): boolean => {

@@ -7,9 +7,11 @@ import {
   RouteBuilder,
   AppNavLink,
   AppNavSection,
+} from '@openmsupply-client/common';
+import {  
   UserStoreNodeFragment,
   StoreModeNodeType,
-} from '@openmsupply-client/common';
+} from '@openmsupply-client/api';
 import { AppRoute } from '@openmsupply-client/config';
 import { useNestedNav } from './useNestedNav';
 

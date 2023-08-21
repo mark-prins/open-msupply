@@ -43,6 +43,5 @@ export * from './styles';
 export * from './localStorage';
 export * from './types';
 export * from './api';
-export * from './authentication';
 
 export { create };

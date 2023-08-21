@@ -2,7 +2,7 @@
 
 ### Overview
 
-Common utility types & GQL generated types.
+Common utility types
 
 ### Intentions
 
@@ -22,4 +22,3 @@ Would probably be more useful in `@common/system`, colocated with the `Item` dom
 
 ### Future considerations
 
-- It's possible and probably a good idea that we split at least some of the GQL generated schema up into the packages which utilise those types.

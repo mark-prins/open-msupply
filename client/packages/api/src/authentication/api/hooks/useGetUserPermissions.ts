@@ -1,4 +1,4 @@
-import { UserPermission } from '@common/types';
+import { UserPermission } from '@openmsupply-client/api';
 import { UserStoreNodeFragment } from '../operations.generated';
 import { useUserPermissions } from './useUserDetails';
 

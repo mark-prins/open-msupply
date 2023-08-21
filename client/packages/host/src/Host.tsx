@@ -17,7 +17,6 @@ import {
   IntlProvider,
   RandomLoader,
   ConfirmationModalProvider,
-  AuthProvider,
   AlertModalProvider,
   EnvUtils,
   LocalStorage,
@@ -30,6 +29,7 @@ import { Site } from './Site';
 import { AuthenticationAlert } from './components/AuthenticationAlert';
 import { Discovery } from './components/Discovery';
 import { Android } from './components/Android';
+import { AuthProvider } from '@openmsupply-client/api';
 
 const appVersion = require('../../../../package.json').version; // eslint-disable-line @typescript-eslint/no-var-requires
 

@@ -1,4 +1,6 @@
-import { AuthError, LocaleKey, LocalStorage, TypedTFunction } from '../..';
+import { AuthError } from '@common/types';
+import { LocalStorage } from '@openmsupply-client/common';
+import { LocaleKey, TypedTFunction } from '@common/intl';
 import { Sdk, AuthTokenQuery, RefreshTokenQuery } from './operations.generated';
 
 export type AuthenticationError = {

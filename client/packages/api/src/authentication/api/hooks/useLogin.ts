@@ -2,16 +2,21 @@ import { useQueryClient } from 'react-query';
 import { DefinitionNode, DocumentNode, OperationDefinitionNode } from 'graphql';
 
 import { useIntlUtils } from '@common/intl';
-import { LanguageType, UserNode, UserStoreNodeFragment } from '@common/types';
-import { AuthCookie, AuthError, setAuthCookie } from '../../AuthContext';
+import {
+  LanguageType,
+  UserNode,
+  
+} from '@openmsupply-client/api';
+import { AuthCookie, setAuthCookie } from '../../AuthContext';
 import { useGetAuthToken } from './useGetAuthToken';
 import {
   AuthenticationCredentials,
-  LocalStorage,
+  LocalStorage,useGql,
   useLocalStorage,
-} from '../../../localStorage';
-import { useGql } from '../../../api';
+} from '@openmsupply-client/common';
 import { useAuthApi, useGetUserDetails, useGetUserPermissions } from '..';
+import { UserStoreNodeFragment } from '../operations.generated';
+import { AuthError } from '@common/types';
 
 const authNameQueries = ['authToken', 'me'];
 const isAuthRequest = (definitionNode: DefinitionNode) => {
