@@ -1,5 +1,4 @@
 import React from 'react';
-import { AppRoute } from '@openmsupply-client/config';
 import { render } from '@testing-library/react';
 import {
   RouteBuilder,
@@ -14,7 +13,7 @@ describe('Breadcrumbs', () => {
     const { queryByText } = render(
       <TestingProvider>
         <TestingRouter
-          initialEntries={[RouteBuilder.create(AppRoute.Distribution).build()]}
+          initialEntries={[RouteBuilder.create('distribution').build()]}
         >
           <Route path="*" element={<Breadcrumbs />}></Route>
         </TestingRouter>
@@ -28,8 +27,8 @@ describe('Breadcrumbs', () => {
       <TestingProvider>
         <TestingRouter
           initialEntries={[
-            RouteBuilder.create(AppRoute.Distribution)
-              .addPart(AppRoute.OutboundShipment)
+            RouteBuilder.create('distribution')
+              .addPart('otbound-shipment')
               .build(),
           ]}
         >
@@ -46,9 +45,9 @@ describe('Breadcrumbs', () => {
       <TestingProvider>
         <TestingRouter
           initialEntries={[
-            RouteBuilder.create(AppRoute.Distribution)
-              .addPart(AppRoute.CustomerRequisition)
-              .addPart(AppRoute.OutboundShipment)
+            RouteBuilder.create('distribution')
+              .addPart('customer-requisition')
+              .addPart('outbound-shipment')
               .build(),
           ]}
         >
@@ -65,8 +64,8 @@ describe('Breadcrumbs', () => {
       <TestingProvider>
         <TestingRouter
           initialEntries={[
-            RouteBuilder.create(AppRoute.Distribution)
-              .addPart(AppRoute.OutboundShipment)
+            RouteBuilder.create('distribution')
+              .addPart('outbound-shipment')
               .build(),
           ]}
         >
@@ -86,9 +85,9 @@ describe('Breadcrumbs', () => {
       <TestingProvider>
         <TestingRouter
           initialEntries={[
-            RouteBuilder.create(AppRoute.Distribution)
-              .addPart(AppRoute.CustomerRequisition)
-              .addPart(AppRoute.OutboundShipment)
+            RouteBuilder.create('distribution')
+              .addPart('customer-requisition')
+              .addPart('outbound-shipment')
               .build(),
           ]}
         >

@@ -5,7 +5,6 @@ import { Box } from '@mui/material';
 import { Breadcrumbs } from './Breadcrumbs';
 import { StoryProvider, TestingRouter } from '../../../../utils/testing';
 import { RouteBuilder } from '../../../../utils';
-import { AppRoute } from '@openmsupply-client/config';
 
 export default {
   title: 'Components/Breadcrumbs',
@@ -31,14 +30,14 @@ const Template: Story<{ initialEntries: string[] }> = ({ initialEntries }) => {
 
 export const Short = Template.bind({});
 Short.args = {
-  initialEntries: [RouteBuilder.create(AppRoute.Distribution).build()],
+  initialEntries: [RouteBuilder.create('distribution').build()],
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
   initialEntries: [
-    RouteBuilder.create(AppRoute.Distribution)
-      .addPart(AppRoute.OutboundShipment)
+    RouteBuilder.create('distribution')
+      .addPart('outbound-shipment')
       .addPart('3')
       .build(),
   ],
@@ -47,24 +46,24 @@ Medium.args = {
 export const TooLong = Template.bind({});
 TooLong.args = {
   initialEntries: [
-    RouteBuilder.create(AppRoute.Distribution)
-      .addPart(AppRoute.OutboundShipment)
-      .addPart(AppRoute.Distribution)
-      .addPart(AppRoute.OutboundShipment)
-      .addPart(AppRoute.Distribution)
-      .addPart(AppRoute.OutboundShipment)
-      .addPart(AppRoute.Distribution)
-      .addPart(AppRoute.OutboundShipment)
-      .addPart(AppRoute.Distribution)
-      .addPart(AppRoute.OutboundShipment)
-      .addPart(AppRoute.Distribution)
-      .addPart(AppRoute.OutboundShipment)
-      .addPart(AppRoute.Distribution)
-      .addPart(AppRoute.OutboundShipment)
-      .addPart(AppRoute.Distribution)
-      .addPart(AppRoute.OutboundShipment)
-      .addPart(AppRoute.Distribution)
-      .addPart(AppRoute.OutboundShipment)
+    RouteBuilder.create('distribution')
+      .addPart('outbound-shipment')
+      .addPart('distribution')
+      .addPart('outbound-shipment')
+      .addPart('distribution')
+      .addPart('outbound-shipment')
+      .addPart('distribution')
+      .addPart('outbound-shipment')
+      .addPart('distribution')
+      .addPart('outbound-shipment')
+      .addPart('distribution')
+      .addPart('outbound-shipment')
+      .addPart('distribution')
+      .addPart('outbound-shipment')
+      .addPart('distribution')
+      .addPart('outbound-shipment')
+      .addPart('distribution')
+      .addPart('outbound-shipment')
       .addPart('3')
       .build(),
   ],

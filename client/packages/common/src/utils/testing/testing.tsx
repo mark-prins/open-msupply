@@ -8,7 +8,6 @@ import { QueryClientProvider, QueryClient } from 'react-query';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { TableProvider, createTableStore } from '../../ui/layout/tables';
 import { createQueryParamsStore, GqlProvider } from '../..';
-import { Environment } from '@openmsupply-client/config';
 import { ConfirmationModalProvider } from '../../ui/components/modals';
 import { renderHook } from '@testing-library/react';
 import i18next from 'i18next';
@@ -19,6 +18,8 @@ import appFr from '@common/intl/locales/fr/app.json';
 import commonFr from '@common/intl/locales/fr/common.json';
 import appAr from '@common/intl/locales/ar/app.json';
 import commonAr from '@common/intl/locales/ar/common.json';
+
+const GRAPHQL_URL = 'http://localhost:8000/graphql';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -95,7 +96,7 @@ export const TestingProvider: FC<
 > = ({ children, locale = 'en' }) => (
   <React.Suspense fallback={<span>[suspended]</span>}>
     <QueryClientProvider client={queryClient}>
-      <GqlProvider url={Environment.GRAPHQL_URL}>
+      <GqlProvider url={GRAPHQL_URL}>
         <SnackbarProvider maxSnack={3}>
           <IntlTestProvider locale={locale}>
             <TableProvider
@@ -120,7 +121,7 @@ export const TestingProvider: FC<
 export const StoryProvider: FC<PropsWithChildrenOnly> = ({ children }) => (
   <React.Suspense fallback={<span>?</span>}>
     <QueryClientProvider client={queryClient}>
-      <GqlProvider url={Environment.GRAPHQL_URL}>
+      <GqlProvider url={GRAPHQL_URL}>
         <SnackbarProvider maxSnack={3}>
           <IntlTestProvider locale="en">
             <TableProvider createStore={createTableStore}>
