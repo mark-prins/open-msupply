@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { AppRoute } from '@openmsupply-client/config';
 import {
+  AppRouteCommon,
   BasicSpinner,
   Box,
   ButtonWithIcon,
@@ -116,7 +117,7 @@ export const Android = () => {
 
     console.error('Connecting to previous server:', result.error);
     navigate(
-      RouteBuilder.create(AppRoute.Discovery)
+      RouteBuilder.create(AppRouteCommon.Discovery)
         .addPart(`?timedout=${!!connectToPreviousFailed}`)
         .build()
     );
@@ -140,7 +141,7 @@ export const Android = () => {
       (!previousServer?.ip || connectToPreviousFailed)
     ) {
       navigate(
-        RouteBuilder.create(AppRoute.Discovery)
+        RouteBuilder.create(AppRouteCommon.Discovery)
           .addPart(`?timedout=${!!connectToPreviousFailed}`)
           .build()
       );

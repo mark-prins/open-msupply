@@ -22,6 +22,7 @@ import {
   EnvUtils,
   LocalStorage,
   AuthError,
+  AppRouteCommon,
 } from '@openmsupply-client/common';
 import { AppRoute, Environment } from '@openmsupply-client/config';
 import { Initialise, Login, Viewport } from './components';
@@ -79,7 +80,7 @@ const Host = () => (
                             <Routes>
                               <Route
                                 path={RouteBuilder.create(
-                                  AppRoute.Initialise
+                                  AppRouteCommon.Initialise
                                 ).build()}
                                 element={<Initialise />}
                               />
@@ -91,7 +92,7 @@ const Host = () => (
                               />
                               <Route
                                 path={RouteBuilder.create(
-                                  AppRoute.Discovery
+                                  AppRouteCommon.Discovery
                                 ).build()}
                                 element={<Discovery />}
                               />

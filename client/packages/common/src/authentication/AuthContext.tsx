@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { createContext, useMemo, useState, useEffect, FC } from 'react';
-import { AppRoute } from '@openmsupply-client/config';
+import { AppRouteCommon } from '@common/types';
 import { useLocalStorage } from '../localStorage';
 import Cookies from 'js-cookie';
 import addMinutes from 'date-fns/addMinutes';
@@ -172,12 +172,12 @@ export const AuthProvider: FC<PropsWithChildrenOnly> = ({ children }) => {
       const authCookie = getAuthCookie();
       const { token } = authCookie;
       const isInitScreen = matchPath(
-        RouteBuilder.create(AppRoute.Initialise).addWildCard().build(),
+        RouteBuilder.create(AppRouteCommon.Initialise).addWildCard().build(),
         location.pathname
       );
 
       const isDiscoveryScreen = matchPath(
-        RouteBuilder.create(AppRoute.Discovery).addWildCard().build(),
+        RouteBuilder.create(AppRouteCommon.Discovery).addWildCard().build(),
         location.pathname
       );
 

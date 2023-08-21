@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { create } from 'zustand';
 import { AppRoute } from '@openmsupply-client/config';
 import {
+  AppRouteCommon,
   AuthenticationError,
   InitialisationStatusType,
   useAuthContext,
@@ -72,7 +73,7 @@ export const useLoginForm = (
     if (!initStatus) return;
 
     if (initStatus.status != InitialisationStatusType.Initialised)
-      navigate(`/${AppRoute.Initialise}`);
+      navigate(`/${AppRouteCommon.Initialise}`);
   }, [initStatus]);
 
   return {

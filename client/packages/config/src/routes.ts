@@ -1,7 +1,6 @@
 export enum AppRoute {
   Android = 'android',
 
-  Initialise = 'initialise',
   Login = 'login',
   Distribution = 'distribution',
   OutboundShipment = 'outbound-shipment',
@@ -11,8 +10,6 @@ export enum AppRoute {
   Patients = 'patients',
   Encounter = 'encounter',
   Prescription = 'prescription',
-
-  Discovery = 'discovery',
 
   Dashboard = 'dashboard',
 
