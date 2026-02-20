@@ -47,6 +47,17 @@ jobs:
               comment.body?.includes(marker)
             );
 
+            const thresholdBytes = 2 * 1024;
+
+            const diffBytes = Number('${{ steps.get-diff.outputs.diff_file_size }}');
+            const exceedsThreshold = diffBytes !== null && Math.abs(diffBytes) > thresholdBytes;
+            const shouldComment = Boolean(existingComment) || exceedsThreshold;
+
+            if (!shouldComment) {
+              core.info(`Skipping PR comment: bundle size change (${diffBytes ?? 'unknown'} bytes) is within ±2KB and no existing comment was found.`);
+              return;
+            }
+
             if (existingComment) {
               await github.rest.issues.updateComment({
                 owner: context.repo.owner,
