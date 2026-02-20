@@ -10,7 +10,119 @@ export const UnhappyMan: React.FC = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <title>{'Error illustration'}</title>
-      
+      <defs>
+        <linearGradient
+          x1="30.668%"
+          y1="40.384%"
+          x2="65.881%"
+          y2="53.418%"
+          id="prefix__c"
+        >
+          <stop stopColor="#E1E7EA" offset="0%" />
+          <stop stopColor="#D0D6DC" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="31.432%"
+          y1="42.349%"
+          x2="72.312%"
+          y2="56.615%"
+          id="prefix__e"
+        >
+          <stop stopColor="#E1E7EA" offset="0%" />
+          <stop stopColor="#D0D6DC" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="50%"
+          y1="45.808%"
+          x2="79.143%"
+          y2="65.232%"
+          id="prefix__f"
+        >
+          <stop stopColor="#FBFBFB" offset="0%" />
+          <stop stopColor="#D9DFE3" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="25.16%"
+          y1="3.067%"
+          x2="49.928%"
+          y2="89.514%"
+          id="prefix__g"
+        >
+          <stop stopColor="#ECECEC" offset="0%" />
+          <stop stopColor="#E1E7EA" offset="71.754%" />
+          <stop stopColor="#BCC3CA" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="29.489%" y1="50%" x2="100%" y2="50%" id="prefix__h">
+          <stop stopColor="#BAC6D2" offset="0%" />
+          <stop stopColor="#7F8F9F" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="50%"
+          y1="50%"
+          x2="76.359%"
+          y2="71.293%"
+          id="prefix__i"
+        >
+          <stop stopColor="#E1E7EA" offset="0%" />
+          <stop stopColor="#D0D6DC" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="73.341%"
+          y1="89.804%"
+          x2="23.909%"
+          y2="5.486%"
+          id="prefix__j"
+        >
+          <stop stopColor="#DAE2E6" offset="0%" />
+          <stop stopColor="#E3EBEF" offset="58%" />
+          <stop stopColor="#EDF6F9" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="29.814%"
+          y1="47.36%"
+          x2="111.048%"
+          y2="50%"
+          id="prefix__k"
+        >
+          <stop stopColor="#C4CDD1" offset="0%" />
+          <stop stopColor="#C6CFD3" stopOpacity={0} offset="100%" />
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="prefix__l">
+          <stop stopColor="#7A87AF" offset="0%" />
+          <stop stopColor="#444F77" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="prefix__m">
+          <stop stopColor="#7A87AF" offset="0%" />
+          <stop stopColor="#444F77" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="18.13%"
+          y1="4.088%"
+          x2="74.703%"
+          y2="111.588%"
+          id="prefix__n"
+        >
+          <stop stopColor="#E5E9F0" offset="0%" />
+          <stop stopColor="#D2DAE8" offset="100%" />
+        </linearGradient>
+        <radialGradient
+          cx="43.37%"
+          cy="34.68%"
+          fx="43.37%"
+          fy="34.68%"
+          r="58.142%"
+          gradientTransform="matrix(0 -1 .90933 0 .118 .78)"
+          id="prefix__b"
+        >
+          <stop stopColor="#EBEDF0" stopOpacity={0.24} offset="0%" />
+          <stop stopColor="#EBEDF0" stopOpacity={0.846} offset="53.678%" />
+          <stop stopColor="#E0E4E7" stopOpacity={0} offset="100%" />
+        </radialGradient>
+        <path
+          d="M297.818 86.074C305.031 71.728 284.416 0 141.479 0 38.307 0-9.046 58.71 1.423 88.465"
+          id="prefix__a"
+        />
+      </defs>
       <g fill="none" fillRule="evenodd">
         <path d="M.469 0h299.063v300H.469z" />
         <g transform="translate(.469 27.273)">
