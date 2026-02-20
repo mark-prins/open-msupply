@@ -55,6 +55,7 @@ jobs:
 
             if (!shouldComment) {
               core.info(`Skipping PR comment: bundle size change (${diffBytes ?? 'unknown'} bytes) is within ±2KB and no existing comment was found.`);
+              return;
             }
 
             if (existingComment) {
